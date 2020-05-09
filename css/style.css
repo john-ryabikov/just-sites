@@ -1,0 +1,1717 @@
+@charset "UTF-8";
+
+/* ------------- ОСНОВНЫЕ НАСТРОЙКИ СТИЛЯ ------------------ */
+
+html {
+	overflow-x: hidden; 
+}
+body {
+	margin: 0;
+	padding: 0;
+    overflow-x: hidden;
+}
+* {
+	box-sizing: border-box;
+}
+.vk:hover {
+    color: #4c75a3;
+}
+.inst:hover {
+    color: rgba(193,53,132, 1.000);
+}
+.what:hover {
+    color: rgba(37,211,102,1.000);
+}
+.fon {
+	width: 100vw;
+	height: 100vh;
+	background: url(../img/JPG/main.jpg) no-repeat;
+	background-size: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -100;
+}
+#blur {
+	background: url(../img/JPG/blur.jpg) no-repeat;
+	background-size: cover;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -100;
+}
+input::placeholder {
+    color: rgba(255, 153, 0, 0.600);
+}
+textarea::placeholder {
+    color: rgba(255, 153, 0, 0.600);
+}
+#uncor_projects {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+}
+#uncor_contacts {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 1px;
+    height: 1px;
+}
+
+/* ------------- ШРИФТ САЙТА ------------------ */
+
+@font-face {
+	font-family: "Oren";
+	src: url(../fonts/OrenBurgC/Bold/OrenburgC.ttf);
+	font-weight: normal;
+}
+@font-face {
+	font-family: "OrenBold";
+	src: url(../fonts/OrenBurgC/Regular/OrenburgC-Bold.ttf);
+	font-weight: normal;
+}
+@font-face {
+	font-family: "Icons";
+	src: url(../fonts/FontAwesome/Font\ Awesome\ 5\ Free-Regular-400.otf);
+	font-weight: normal;
+}
+
+/*-------------- ГЛАВНЫЙ ЭКРАН -----------------*/
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.main-logo {
+    position: absolute;
+    top: 40px;
+    left: 80px;
+    width: 180px;
+}
+.nav-menu {
+    position: absolute;
+    top: 0;
+    right: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 230px;
+    height: 150px;
+}
+.nav-menu-btn {
+    position: relative;
+    display: block;
+    font-family: "Oren";
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding-bottom: 15px;
+}
+.nav-menu-btn:last-child {
+    margin-left: 35px;
+}
+.nav-menu-btn::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 0;
+	height: 2px;
+	background-color: #FF9900;
+	transition: all 0.4s;
+}
+.nav-menu-btn:hover:before {
+	width: 100%;
+	left: 0;
+}
+.nav-phone {
+    position: absolute;
+    top: 0;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 240px;
+    height: 150px;
+}
+.nav-phone-numb {
+    margin: 0;
+    text-align: end;
+}
+.nav-phone-call {
+    font-family: "OrenBold";
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none; 
+}
+.nav-phone-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 240px;
+    height: 40px;
+    line-height: 47px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+.nav-phone-btn span {
+    font-family: "Oren";
+    font-size: 14px;
+    color: rgba(225,225,225,0.500);
+    letter-spacing: 1px;
+    user-select: none;
+}
+.nav-phone-btn i {
+    font-size: 24px;
+    color: rgba(37,211,102,1.000); 
+    margin-left: 10px;
+    transition: all 0.3s;
+}
+.nav-phone-btn:hover {
+    transform: scale(1.10, 1.10);
+}
+.nav-menu-bar {
+    display: none;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 25px;
+    right: 20px;
+}
+.nav-menu-bar img {
+    width: inherit;
+    margin: 0 auto;
+}
+.main-cont {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 1200px;
+    height: 500px; 
+}
+.line-h1 {
+	position: absolute;
+	top: 75px;
+	left: 0;
+	display: block;
+	border: none;
+	background-color: #fff;
+	width: 100px;
+	margin-top: 0;
+	height: 1px;
+}
+h1 {
+    font-family: "OrenBold";
+    font-weight: inherit;
+    color: #fff;
+    font-size: 82px;
+    margin: 0;
+    margin-top: 35px;
+    letter-spacing: 1px;
+    text-align: start;
+    line-height: 34px;
+    user-select: none;
+    margin-bottom: 40px;
+}
+.main-cont-txt {
+    font-family: "Oren";
+	color: rgba(255, 255, 255, 0.500);
+	width: 600px;
+	line-height: 30px;
+    font-size: 22px;
+    margin-bottom: 0;
+}
+.main-cont-btns {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 450px;
+}
+.main-cont-btn {
+    font-family: "OrenBold";
+    font-size: 12px;
+    border: 1px solid rgba(225,225,225,0.500);
+    width: 210px;
+    height: 50px;
+    margin-top: 50px;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 2px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.700); 
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.4s;
+    user-select: none;
+    cursor: pointer;
+}
+.main-cont-btn-brif-1 {
+    font-family: "OrenBold";
+    font-size: 12px;
+    border: 1px solid rgba(225,225,225,0.500);
+    width: 210px;
+    height: 50px;
+    margin-top: 50px;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.700); 
+    text-decoration: none;
+    transition: all 0.4s;
+    user-select: none;
+    cursor: pointer;
+    background-color: rgba(225,225,225,1.000);
+    color: black;
+}
+.main-cont-btn-brif-1 i {
+    font-size: 16px;
+    margin-left: 3px;
+}
+.main-cont-btn:hover {
+    transform: scale(1.08, 1.08);
+    background-color: rgba(225,225,225,0.100); 
+}
+.main-cont-btn-brif-1:hover {
+    transform: scale(1.08, 1.08);
+    background-color: rgba(225,225,225,1.000);
+}
+.main-cont-scroll {
+    position: fixed;
+    bottom: 50px;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 30px;
+    height: 115px;
+}
+.scroll-txt {
+    font-family: "Oren"; 
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    width: 150px;
+    font-size: 10px;
+    text-transform: uppercase;
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+    letter-spacing: 3px;
+    user-select: none;
+    padding-left: 20px;
+}
+.scroll-ball-box {
+    border: 1px solid #FFCC00;
+    border-radius: 10px;
+    width: 18px;
+    height: 40px;
+}
+@keyframes scroll-ball {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(20px);
+              transform: translateY(20px);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(20px);
+              transform: translateY(20px);
+    }
+  }
+.scroll-ball {
+    background-color: #fff;
+    width: 11px;
+    height: 11px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 5px;
+    -webkit-animation: slide-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+    animation: slide-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+}
+.main-cont-soc {
+    position: absolute;
+    bottom: 50px;
+    left: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 30px;
+    height: 125px;
+}
+.main-cont-soc a { 
+    width: 30px;
+    height: 30px;
+    line-height: 42px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    transition: all 0.4s;
+}
+
+/*-------------- ВТОРОЙ БЛОК -----------------*/
+
+.block-2 {
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    width: 100%;
+    height: 350px;
+    margin-top: 90px;
+}
+.block-2-label {
+    background-color: #fff;
+    position: absolute;
+    top: -47px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100px;
+    border-radius: 50%/50px;
+}
+.main-cont-2 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1000px;
+}
+.main-prem-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 280px;
+    height: inherit;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all 0.4s;
+}
+.main-prem-card img {
+    width: 100px;
+    margin-bottom: 30px;
+}
+.prem-card-txt p {
+    user-select: none;
+    font-family: "Oren";
+    margin: 0;
+    width: auto;
+    color: rgba(0,0,0,0.600);
+    margin-left: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+.main-prem-card:hover {
+    transform: scale(1.03, 1.03);
+}
+.prem-card-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -40px;
+    width: 60px;
+    height: 1px;
+    background-color: #000;
+}
+
+/*-------------- ТРЕТИЙ БЛОК -----------------*/
+
+.block-3 {
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 110px;
+    width: 100%;
+    height: 800px;
+}
+.author {
+	position: relative;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: space-between;
+	width: 1100px;
+	height: auto;
+}
+.author-blog {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	color: black;
+	margin-left: 20px;
+	width: 570px;
+}
+.line-author {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	border: none;
+	background-color: #000;
+	width: 100px;
+	margin-top: 0;
+	height: 1px;
+}
+h2, h3 {
+	font-family: "OrenBold";
+	display: inline-block;
+	margin-top: 35px;
+	margin-bottom: 0;
+	color: black;
+	font-size: 50px;
+	font-weight: normal;
+}
+.h2-span, .h3-span {
+	font-family: "Oren";
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	font-size: 20px;
+	color: rgba(0,0,0,0.300);
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+.author-blog-txt {
+    position: relative;
+	font-family: "Oren";
+	color: #000;
+	margin-top: 45px;
+	width: 550px;
+	line-height: 24px;
+	font-size: 16px;
+    margin-bottom: 40px;
+    text-indent: 20px
+}
+.author-blog-txt img {
+    position: absolute;
+    width: 20px;
+    top: -20px;
+    left: 0;
+}
+.block-3-btns {
+    position: relative;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.jobs-btn, .block-4-btn, .block-5-btn, .block-6-btn, .form-window-btn {
+    border: 1px solid rgba(3, 3, 41, 0.850);
+    font-family: "OrenBold";
+    font-size: 12px;
+	display: block;
+	height: 50px;
+	color: #030329;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 3px;
+	cursor: pointer;
+	text-decoration: none;
+	text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.4s;
+    text-align: start;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.jobs-btn i, .block-5-btn i {
+    margin-left: 10px;
+}
+.jobs-btn:hover, .block-5-btn:hover {
+    letter-spacing: 4px;
+}
+.price-btn {
+    font-family: "Oren";
+    color: rgba(76,117,163 ,1.000);
+    height: 50px;
+    line-height: 50px;
+}
+.avatar {
+	position: relative;
+	width: 420px;
+	height: auto;
+	text-align: center;
+}
+.avatar-img {
+	display: inline-block;
+	width: 90%;
+}
+.avatar-soc {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 380px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.avatar-soc-a {
+    position: relative;
+    font-family: 'Oren';
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: inherit;
+    text-decoration: none;
+    color: rgba(0,0,0,0.800);
+}
+.avatar-soc-a span {
+    margin-left: 10px;
+}
+.avatar-soc-img {
+    width: 30px;
+}
+
+/*-------------- ЧЕТВЕРТЫЙ БЛОК -----------------*/
+
+.block-4 {
+    background-color: #eff0f3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    width: 100%;
+    height: 550px; 
+}
+.block-4-cont {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: inherit;
+}
+.block-4-txt {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	color: black;
+    width: 50%;
+    height: inherit;
+}
+.block-4-txt-box {
+    position: relative;
+    display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+    justify-content: center;
+    margin-right: 100px;
+}
+.block-4-txt p {
+    position: relative;
+	font-family: "Oren";
+	color: #000;
+	width: 420px;
+	line-height: 24px;
+	font-size: 16px;
+    margin-bottom: 40px;
+}
+.block-4-cont img {
+    width: 50%;
+    height: inherit;
+}
+.block-4-btn i {
+    margin-left: 10px;
+}
+.block-4-btn:hover {
+    letter-spacing: 4px;
+}
+
+/*-------------- ПЯТЫЙ БЛОК -----------------*/
+
+.block-5 {
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 160px;
+    padding-bottom: 130px;
+    width: 100%;
+    height: 650px;
+    overflow-y: hidden; 
+}
+.block-5-cont {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 420px;
+}
+.block-5-txt {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 400px;
+    height: 80%;
+    margin-left: 30px;
+}
+.block-5-txt-h {
+    font-family: "OrenBold";
+    margin: 0;
+	margin-top: 35px;
+	margin-bottom: 0;
+	color: black;
+	font-size: 50px;
+}
+.block-5-txt-p {
+    font-family: 'Oren';
+    font-size: 16px;
+    line-height: 24px;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.block-5-boxslider {
+    position: relative;
+    width: 750px;
+    height: 96%;
+    margin-right: 30px;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+.swiper-slide {
+    position: relative;
+    width: 310px;
+    height: 310px;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0,0,0,0.300);
+}
+.swiper-slide img {
+    width: 100%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3), -23px 0 20px -23px rgba(0, 0, 0, .8), 23px 0 20px -23px rgba(0, 0, 0, .8), 0 0 40px rgba(0, 0, 0, .1) inset;
+    border-radius: 5px;
+}
+.swiper-slide:hover img {
+    transform: scale(1.03, 1.03);
+    transition: all 0.4s;
+}
+.project-btn {
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    height: inherit;
+    border-radius: 5px;
+    margin: 0;
+    cursor: pointer;
+}
+.project-btn-plus {
+    font-family: "Oren";
+    font-size: 90px;
+    color: #000;
+    user-select: none;
+}
+.project-btn-txt {
+    font-family: "Oren";
+    font-size: 36px;
+    color: rgba(0,0,0,0.600);
+    user-select: none;
+}
+.project-btn:hover{
+    transform: scale(1.03, 1.03);
+    transition: all 0.4s;
+}
+
+/*-------------- ШЕСТОЙ БЛОК -----------------*/
+
+.block-6 {
+    background-color: #eff0f3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    width: 100%;
+    overflow-y: hidden; 
+}
+.block-6-cont {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 1040px;
+}
+.block-6-cont-txt {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: inherit;
+}
+.block-6-cont-h {
+    font-family: "OrenBold";
+    font-size: 50px;
+    text-align: start;
+    margin: 0;
+    margin-top: 35px;
+}
+.block-6-cont-h-span {
+    font-family: "Oren";
+	display: block;
+	margin-top: 15px;
+	margin-bottom: 30px;
+	font-size: 20px;
+	color: rgba(0,0,0,0.300);
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+.block-6-cont-h-txt {
+    position: relative;
+	font-family: "Oren";
+	color: rgba(0, 0, 0, 0.7);
+	width: 85%;
+	line-height: 30px;
+	font-size: 22px;
+    text-align: start;
+}
+.block-6-cont-features {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: inherit;
+    margin-top: 45px;
+}
+.block-6-prem-card {
+    position: relative;
+    width: 320px;
+    height: 200px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px; 
+    z-index: 3;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.prem-card-6-num {
+    font-family: 'OrenBold';
+    font-size: 24px;
+    margin: 0;
+    color: #000;
+}
+.prem-card-6-txt {
+    font-family: 'Oren';
+    font-size: 16px;
+    margin: 0;
+    margin-top: 20px;
+    line-height: 20px;
+    width: 80%;
+    color: #000;
+}
+.block-6-prem-card img {
+    position: absolute;
+    width: 140px;
+    height: 140x;
+    bottom: 15px;
+    right: 10px;
+}
+.block-6-label {
+    background-color: #eff0f3;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100px;
+    border-radius: 50%/50px;
+}
+.block-6-btns {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 460px;
+    margin: auto;
+    margin-top: 70px;
+}
+.block-6-btn {
+    font-family: "OrenBold";
+    border: 1px solid rgba(3, 3, 41, 0.850);
+    font-size: 12px;
+    width: 210px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 2px; 
+    text-decoration: none;
+    color: #030329;
+    transition: all 0.4s;
+    user-select: none;
+    cursor: pointer;
+}
+.block-6-btn-brif {
+    font-family: "Oren";
+    color: #fff;
+    border: 1px solid rgba(3, 3, 41, 0.850);
+    background-color: rgba(3, 3, 41, 0.850);
+    font-size: 12px;
+    width: 210px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+.block-6-btn-brif i {
+    font-size: 16px;
+    margin-left: 3px;
+}
+.block-6-btn:hover {
+    transform: scale(1.08, 1.08);
+    background-color: rgba(225,225,225,0.100); 
+}
+.block-6-btn-brif:hover {
+    transform: scale(1.08, 1.08);
+}
+
+/*-------------- СЕДЬМОЙ БЛОК -----------------*/
+
+.block-7 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    width: 100%;
+    height: 100vh; 
+}
+.block-7-cont {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    height: 450px;
+}
+.block-7-txt {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 650px;
+    height: inherit;
+}
+.line-block-7 {
+    position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	border: none;
+	width: 100px;
+	margin-top: 0;
+    height: 1px;
+    background-color: #fff;
+}
+.block-7-txt-h1 {
+    font-family: "OrenBold";
+    font-size: 76px;
+    font-weight: normal;
+    color: #fff;
+    margin: 0;
+    margin-top: 30px;
+}
+.block-7-txt-span {
+    font-family: "Oren";
+	display: block;
+	margin-top: 15px;
+	margin-bottom: 30px;
+	font-size: 20px;
+	color: rgba(255, 255, 255, 0.3);
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+.block-7-txt-p {
+    font-family: "Oren";
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.500);
+    line-height: 30px;
+    margin: 0;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.block-7-txt-a {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    font-family: "Oren";
+    font-size: 14px;
+    color: rgba(225,225,225,0.250);
+    text-decoration: none;
+    height: 35px;
+    line-height: 35px;
+    margin-top: 15px;
+}
+.block-7-txt-a i {
+    width: 30px;
+    height: inherit;
+    text-align: center;
+    line-height: 35px;
+    font-size: 30px;
+    margin-right: 14px;
+    color: #fff;
+    transition: all 0.4s;
+}
+.block-7-txt-a:hover .what-cont {
+    color: rgba(37,211,102,1.000);
+}
+.block-7-txt-a:hover .mail-cont {
+    color: rgba(76,117,163 ,1.000);
+}
+.block-7-txt-a:hover .inst-cont {
+    color: rgba(193,53,132, 1.000);
+}
+.block-7-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 460px;
+    height: inherit;
+    box-shadow: 0 0 25px rgba(0,0,0,0.600);
+    background-color: rgba(0,0,0,0.800);
+}
+.block-7-form-h {
+    font-family: "OrenBold";
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.block-7-form-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 80%;
+    height: auto;
+    margin-top: 40px;
+}
+.block-7-form-inpt {
+    font-family: "Oren";
+    font-size: 14px;
+    background: none;
+	display: inline-block;
+	width: 100%;
+	height: 50px;
+    margin-bottom: 30px;
+    border: none;
+	border-bottom: 1px solid rgba(225,225,225,0.800);
+	user-select: none;
+    outline: none;
+    color: #fff; 
+}
+.block-7-form-box-phone-email {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.block-7-form-box-phone, .block-7-form-box-email {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 45%;
+}
+.label-form {
+    font-family: "Oren";
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.label-form i {
+    margin-right: 3px;
+}
+.block-7-form-inpt[name=user_phone], .block-6-form-inpt[name=user_email]  {
+    width: 100%;
+}
+.block-7-form-inpt[name=user_text] {
+    margin-top: 10px;
+    resize: none;
+}
+.block-7-form-send {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+}
+.block-7-form-btn {
+    font-family: "OrenBold";
+    font-size: 12px;
+    border: 1px solid rgba(225,225,225,0.500);
+    height: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 2px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.700);
+    background-color: rgba(225,225,225,1.000);
+    color: black;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.block-7-form-btn:hover {
+    transform: scale(1.08, 1.08);
+}
+.form-1-soc {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: inherit;
+}
+.form-1-soc-h {
+    font-family: "Oren";
+    font-size: 12px;
+    margin: 0;
+    color: #fff;
+    margin-right: 5px;
+}
+.form-1-soc-box {
+    margin-top: 12px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 130px;
+}
+.form-1-soc-box a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    color: rgba(225,225,225,0.500);
+    transition: all 0.4s;
+    margin-right: 10px;
+}
+.form-1-soc-box a:last-child {
+    margin-right: 0px;
+}
+.block-7-form-msg {
+    font-family: "Oren";
+    position: absolute;
+    bottom: -45px;
+    left: 0;
+    display: none;
+	width: 100%;
+	font-size: 14px;
+	color: #fff;
+    text-align: center;
+}
+.block-7-form-msg i {
+	display: inline-block;
+	margin-right: 6px;
+	font-size: 18px;
+	color: green;
+}
+
+/*-------------- ПОДВАЛ -----------------*/
+
+.footer {
+    position: relative;
+    margin: 0 auto;
+    bottom: 10px;
+    width: 1000px;
+}
+footer {
+    font-family: "Oren";
+	color: lightgray;
+	text-align: center;
+	font-size: 12px;
+	height: 30px;
+}
+footer a {
+	text-decoration: none;
+	color: gray;
+}
+
+/*-------------- ВСПЛЫВАЮЩЕЕ ОКНО -----------------*/
+
+.overlay {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+    background-color:rgba(0,0,0,0.9);
+    z-index: 5;
+}
+.modal-window {
+	display: block;
+	position: fixed;
+	top: 33%;
+	left: 50%;
+}
+.web-form {
+	font-family: "Oren";
+	width: 480px;
+	height: 530px;
+	margin: 0 auto;
+	background-color: #fff;
+	border-radius: 2px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.form-window-close {
+	width: 20px;
+	cursor: pointer;
+	position: absolute;
+	top: -26px;
+	right: -26px;
+}
+.form-window-close img, .brif-window-close img {
+    width: 100%;
+    opacity: 0.4;
+    transition: all 0.4s;
+}
+.form-window-close:hover img, .brif-window-close:hover img {
+    opacity: 0.9;
+}
+.form-window-header {
+    position: relative;
+    width: 400px;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+.form-window-h {
+	font-family: "OrenBold";
+	font-size: 34px;
+	text-align: start;
+	margin: 0;
+}
+.form-window-p {
+	font-family: "Oren";
+	color: rgba(0,0,0,0.300);
+	margin: 0;
+	text-align: start;
+	margin-top: 5px;
+	width: 410px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.form-window-cont {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	width: 100%;
+	height: auto;
+	margin-top: 35px;
+}
+.form-window-label {
+    font-family: "Oren";
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+.form-window-label i {
+    margin-right: 3px;
+}
+.form-window-inpt {
+    font-family: "Oren";
+    font-size: 14px;
+    background: none;
+	display: inline-block;
+	width: 100%;
+	height: 50px;
+    margin-bottom: 30px;
+    border: none;
+	border-bottom: 1px solid rgba(0,0,0,0.500);
+	user-select: none;
+    outline: none;
+    color: #000; 
+}
+.form-window-box-phone-email {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.form-window-box-phone, .form-window-box-email {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 45%;
+}
+.form-window-inpt[name=user_text] {
+    margin-top: 10px;
+    resize: none;
+}
+.form-window-send {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+}
+.form-window-btn {
+    background: none;
+}
+.form-window-btn i {
+    margin-left: 10px;
+}
+.form-window-btn:hover {
+    letter-spacing: 4px;
+}
+.form-window-soc {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: inherit;
+}
+.form-window-soc-h {
+    font-family: "Oren";
+    font-size: 12px;
+    margin: 0;
+    color: #000;
+    margin-right: 5px;
+}
+.form-window-soc-box {
+    margin-top: 12px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 130px;
+}
+.form-window-soc-box a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    color: rgba(0,0,0,0.700);
+    transition: all 0.4s;
+    margin-right: 10px;
+}
+.form-window-soc-box a:last-child {
+    margin-right: 0px;
+}
+.form-window-inpt::placeholder {
+    color: rgba(0,0,0,0.300);
+}
+
+/*-------------- БРИФ ФОРМА -----------------*/
+
+.overlay-brif {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+	width: 100vw;
+	height: 100vh;
+    background-color:rgba(0,0,0,0.9);
+    overflow-y: auto;
+    z-index: 4;
+}
+.modal-window-brif {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+.brif-window {
+    position: relative;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+    font-family: "Oren";
+	width: 760px;
+	height: 1140px;
+	background-color: #fff;
+    border-radius: 2px;
+}
+.brif-window-close {
+    width: 20px;
+	cursor: pointer;
+	position: absolute;
+	top: -26px;
+	right: -26px;
+}
+.brif-window-close img {
+    width: 100%;
+    opacity: 0.4;
+    transition: all 0.4s;
+}
+.brif-window-close:hover img {
+    opacity: 0.9;
+}
+.brif-window-header {
+    position: relative;
+    width: 660px;
+    margin-top: 50px;
+}
+.brif-window-h {
+	font-family: "OrenBold";
+	font-size: 34px;
+	text-align: start;
+	margin: 0;
+}
+.brif-window-p {
+	font-family: "Oren";
+	color: rgba(0,0,0,0.400);
+	margin: 0;
+	text-align: start;
+	margin-top: 5px;
+	width: 410px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.brif-window-cont {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	width: 660px;
+	height: auto;
+	margin-top: 45px;
+}
+.brif-window-label {
+    font-family: "OrenBold";
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+.brif-window-label-span {
+    font-family: "Oren";
+    color: rgba(0,0,0,0.400);
+}
+.brif-window-inpt-1 {
+    font-family: "Oren";
+    font-size: 16px;
+    background: none;
+	display: inline-block;
+	width: 100%;
+    height: 35px;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    border: none;
+	border-bottom: 1px solid rgba(0,0,0,0.400);
+	user-select: none;
+    outline: none;
+    color: #000;
+    resize: none; 
+}
+.brif-window-checkbox-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 10px;
+    height: 45px;
+    margin-bottom: 50px;
+}
+.brif-window-checkbox-1 label {
+    font-family: "Oren";
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: 25px;
+    padding-left: 35px;
+    line-height: 25px;
+    cursor: pointer;
+    margin-right: 25px;
+    font-size: 14px;
+}
+.brif-window-checkbox-1 input {
+    position: absolute;  
+    opacity: 0;
+}
+.brif-radio-control {
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+.brif-radio-control i{
+    font-size: 14px;
+    display: none;
+}
+.brif-window-checkbox-1 input:checked ~ .brif-radio-control i{
+    color: #CC0033;
+    display: block;
+}
+.brif-window-inpt-2 {
+    font-family: "Oren";
+    font-size: 16px;
+    background: none;
+	display: inline-block;
+	width: 100%;
+    height: 35px;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    border: none;
+	border-bottom: 1px solid rgba(0,0,0,0.400);
+	user-select: none;
+    outline: none;
+    color: #000;
+    resize: none; 
+}
+.brif-window-inpt-2::placeholder {
+    color: rgba(0,0,0,0.300);
+}
+.brif-window-checkbox-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 10px;
+    height: 45px;
+    margin-bottom: 50px;
+}
+.brif-window-checkbox-2 label {
+    font-family: "Oren";
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: 25px;
+    padding-left: 35px;
+    line-height: 25px;
+    cursor: pointer;
+    margin-right: 25px;
+    font-size: 14px;
+}
+.brif-window-checkbox-2 input {
+    position: absolute;  
+    opacity: 0;
+}
+.brif-radio-control {
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+.brif-radio-control i{
+    font-size: 14px;
+    display: none;
+}
+.brif-window-checkbox-2 input:checked ~ .brif-radio-control i{
+    color: #CC0033;
+    display: block;
+}
+.brif-window-checkbox-3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 10px;
+    height: 45px;
+    margin-bottom: 50px;
+    font-size: 14px;
+}
+.brif-window-checkbox-3 label {
+    font-family: "Oren";
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: 25px;
+    padding-left: 35px;
+    line-height: 25px;
+    cursor: pointer;
+    margin-right: 25px;
+}
+.brif-window-checkbox-3 input {
+    position: absolute;  
+    opacity: 0;
+}
+.brif-radio-control {
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+.brif-radio-control i{
+    font-size: 14px;
+    display: none;
+}
+.brif-window-checkbox-3 input:checked ~ .brif-radio-control i{
+    color: #CC0033;
+    display: block;
+}
+.brif-window-contact-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 660px;
+    margin-top: 20px;
+    height: 40px;
+    margin-bottom: 50px;
+}
+.brif-window-inpt {
+    font-family: "Oren";
+    font-size: 14px;
+    background: none;
+	display: inline-block;
+	width: 30%;
+	height: 50px;
+    border: none;
+	border-bottom: 1px solid rgba(0,0,0,0.400);
+	user-select: none;
+    outline: none;
+    color: #000; 
+}
+.brif-window-inpt::placeholder {
+    color: rgba(0,0,0,0.300);
+}
